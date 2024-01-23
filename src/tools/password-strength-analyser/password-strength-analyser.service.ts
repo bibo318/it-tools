@@ -11,24 +11,24 @@ function prettifyExponentialNotation(exponentialNotation: number) {
 
 function getHumanFriendlyDuration({ seconds }: { seconds: number }) {
   if (seconds <= 0.001) {
-    return 'Instantly';
+    return 'Ngay lập tức';
   }
 
   if (seconds <= 1) {
-    return 'Less than a second';
+    return 'Chưa đầy một giây';
   }
 
   const timeUnits = [
-    { unit: 'millenium', secondsInUnit: 31536000000, format: prettifyExponentialNotation, plural: 'millennia' },
-    { unit: 'century', secondsInUnit: 3153600000, plural: 'centuries' },
-    { unit: 'decade', secondsInUnit: 315360000, plural: 'decades' },
-    { unit: 'year', secondsInUnit: 31536000, plural: 'years' },
-    { unit: 'month', secondsInUnit: 2592000, plural: 'months' },
-    { unit: 'week', secondsInUnit: 604800, plural: 'weeks' },
-    { unit: 'day', secondsInUnit: 86400, plural: 'days' },
-    { unit: 'hour', secondsInUnit: 3600, plural: 'hours' },
-    { unit: 'minute', secondsInUnit: 60, plural: 'minutes' },
-    { unit: 'second', secondsInUnit: 1, plural: 'seconds' },
+    { unit: 'Thiên niên kỷ', secondsInUnit: 31536000000, format: prettifyExponentialNotation, plural: 'thiên niên kỷ' },
+    { unit: 'Thế kỷ', secondsInUnit: 3153600000, plural: 'Thế kỉ' },
+    { unit: 'Thập kỷ', secondsInUnit: 315360000, plural: 'thập kỷ' },
+    { unit: 'Năm', secondsInUnit: 31536000, plural: 'Năm' },
+    { unit: 'Tháng', secondsInUnit: 2592000, plural: 'Tháng' },
+    { unit: 'Tuần', secondsInUnit: 604800, plural: 'Tuần' },
+    { unit: 'Ngày', secondsInUnit: 86400, plural: 'Ngày' },
+    { unit: 'Giờ', secondsInUnit: 3600, plural: 'Giờ' },
+    { unit: 'Phút', secondsInUnit: 60, plural: 'Phút' },
+    { unit: 'Giây', secondsInUnit: 1, plural: 'Giây' },
   ];
 
   return _.chain(timeUnits)

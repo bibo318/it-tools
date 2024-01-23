@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Keycode info',
   path: '/keycode-info',
-  description: 'Find the javascript keycode, code, location and modifiers of any pressed key.',
+  description: 'Tìm mã javascript, keycode, location và modifiers của bất kỳ phím nào được nhấn.',
   keywords: [
     'keycode',
     'info',

@@ -5,7 +5,7 @@ export const tool = defineTool({
   name: 'List converter',
   path: '/list-converter',
   description:
-    'This tool can process column-based data and apply various changes (transpose, add prefix and suffix, reverse list, sort list, lowercase values, truncate values) to each row.',
+    'Công cụ này có thể xử lý dữ liệu dựa trên cột và áp dụng nhiều thay đổi khác nhau (hoán vị, thêm tiền tố và hậu tố, danh sách đảo ngược, danh sách sắp xếp, giá trị chữ thường, giá trị cắt bớt) cho mỗi hàng.',
   keywords: ['list', 'converter', 'sort', 'reverse', 'prefix', 'suffix', 'lowercase', 'truncate'],
   component: () => import('./list-converter.vue'),
   icon: List,

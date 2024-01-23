@@ -5,7 +5,7 @@ export const tool = defineTool({
   name: 'Hmac generator',
   path: '/hmac-generator',
   description:
-    'Computes a hash-based message authentication code (HMAC) using a secret key and your favorite hashing function.',
+    'Tính toán mã xác thực tin nhắn dựa trên hàm băm (HMAC) bằng khóa bí mật và hàm băm yêu thích của bạn.',
   keywords: ['hmac', 'generator', 'MD5', 'SHA1', 'SHA256', 'SHA224', 'SHA512', 'SHA384', 'SHA3', 'RIPEMD160'],
   component: () => import('./hmac-generator.vue'),
   icon: ShortTextRound,

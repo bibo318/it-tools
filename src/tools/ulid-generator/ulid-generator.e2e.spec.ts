@@ -8,10 +8,10 @@ test.describe('Tool - ULID generator', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('ULID generator - IT Tools');
+    await expect(page).toHaveTitle('ULID generator - it-tools');
   });
 
-  test('the refresh button generates a new ulid', async ({ page }) => {
+  test('nút làm mới tạo ra một ulid mới', async ({ page }) => {
     const ulid = await page.getByTestId('ulids').textContent();
     expect(ulid?.trim()).toMatch(ULID_REGEX);
 

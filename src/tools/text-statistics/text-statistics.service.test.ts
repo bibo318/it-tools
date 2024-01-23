@@ -3,7 +3,7 @@ import { getStringSizeInBytes } from './text-statistics.service';
 
 describe('text-statistics', () => {
   describe('getStringSizeInBytes', () => {
-    it('should return the size of a string in bytes', () => {
+    it('sẽ trả về kích thước của một chuỗi tính bằng byte', () => {
       expect(getStringSizeInBytes('')).toEqual(0);
       expect(getStringSizeInBytes('a')).toEqual(1);
       expect(getStringSizeInBytes('aa')).toEqual(2);

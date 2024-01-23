@@ -6,19 +6,19 @@ const crackTimeEstimation = computed(() => getPasswordCrackTimeEstimation({ pass
 
 const details = computed(() => [
   {
-    label: 'Password length:',
+    label: 'Độ dài mật khẩu:',
     value: crackTimeEstimation.value.passwordLength,
   },
   {
-    label: 'Entropy:',
+    label: 'Sự hỗn loạn(Entropy):',
     value: Math.round(crackTimeEstimation.value.entropy * 100) / 100,
   },
   {
-    label: 'Character set size:',
+    label: 'Kích thước bộ ký tự:',
     value: crackTimeEstimation.value.charsetLength,
   },
   {
-    label: 'Score:',
+    label: 'Điểm:',
     value: `${Math.round(crackTimeEstimation.value.score * 100)} / 100`,
   },
 ]);
@@ -29,7 +29,7 @@ const details = computed(() => [
     <c-input-text
       v-model:value="password"
       type="password"
-      placeholder="Enter a password..."
+      placeholder="Gõ mật khẩu..."
       clearable
       autofocus
       raw-text
@@ -38,7 +38,7 @@ const details = computed(() => [
 
     <c-card text-center>
       <div op-60>
-        Duration to crack this password with brute force
+        Thời gian để bẻ khóa mật khẩu này bằng brute force
       </div>
       <div text-2xl data-test-id="crack-duration">
         {{ crackTimeEstimation.crackDurationFormatted }}
@@ -56,7 +56,7 @@ const details = computed(() => [
     </c-card>
     <div op-70>
       <span font-bold>Note: </span>
-      The computed strength is based on the time it would take to crack the password using a brute force approach, it does not take into account the possibility of a dictionary attack.
+      Độ mạnh tính toán dựa trên thời gian cần thiết để bẻ khóa mật khẩu bằng cách sử dụng phương pháp brute force, nó không tính đến khả năng xảy ra một cuộc tấn công từ điển.
     </div>
   </div>
 </template>

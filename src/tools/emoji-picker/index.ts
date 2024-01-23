@@ -2,9 +2,9 @@ import { MoodSmile } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Emoji picker',
+  name: 'List biểu tượng cảm xúc',
   path: '/emoji-picker',
-  description: 'Copy and paste emojis easily and get the unicode and code points value of each emoji.',
+  description: 'Sao chép và dán biểu tượng cảm xúc một cách dễ dàng và nhận giá trị unicode và điểm mã của mỗi biểu tượng cảm xúc.',
   keywords: ['emoji', 'picker', 'unicode', 'copy', 'paste'],
   component: () => import('./emoji-picker.vue'),
   icon: MoodSmile,

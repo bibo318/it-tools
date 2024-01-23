@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Chronometer',
   path: '/chronometer',
-  description: 'Monitor the duration of a thing. Basically a chronometer with simple chronometer features.',
+  description: 'Theo dõi thời gian của một điều. Về cơ bản là một chiếc đồng hồ bấm giờ với các tính năng bấm giờ đơn giản.',
   keywords: ['chronometer', 'time', 'lap', 'duration', 'measure', 'pause', 'resume', 'stopwatch'],
   component: () => import('./chronometer.vue'),
   icon: TimerOutlined,

@@ -8,7 +8,7 @@ const decodeUrlSafe = useStorage('base64-string-converter--decode-url-safe', fal
 
 const textInput = ref('');
 const base64Output = computed(() => textToBase64(textInput.value, { makeUrlSafe: encodeUrlSafe.value }));
-const { copy: copyTextBase64 } = useCopy({ source: base64Output, text: 'Base64 string copied to the clipboard' });
+const { copy: copyTextBase64 } = useCopy({ source: base64Output, text: 'Đã sao chép chuỗi Base64 vào bảng nhớ tạm' });
 
 const base64Input = ref('');
 const textOutput = computed(() =>
@@ -17,7 +17,7 @@ const textOutput = computed(() =>
 const { copy: copyText } = useCopy({ source: textOutput, text: 'String copied to the clipboard' });
 const b64ValidationRules = [
   {
-    message: 'Invalid base64 string',
+    message: 'Chuỗi base64 không hợp lệ',
     validator: (value: string) => isValidBase64(value.trim(), { makeUrlSafe: decodeUrlSafe.value }),
   },
 ];
@@ -26,13 +26,13 @@ const b64ValidationWatch = [decodeUrlSafe];
 
 <template>
   <c-card title="String to base64">
-    <n-form-item label="Encode URL safe" label-placement="left">
+    <n-form-item label="Mã hóa URL an toàn" label-placement="left">
       <n-switch v-model:value="encodeUrlSafe" />
     </n-form-item>
     <c-input-text
       v-model:value="textInput"
       multiline
-      placeholder="Put your string here..."
+      placeholder="Đặt string của bạn ở đây..."
       rows="5"
       label="String to encode"
       raw-text
@@ -44,14 +44,14 @@ const b64ValidationWatch = [decodeUrlSafe];
       :value="base64Output"
       multiline
       readonly
-      placeholder="The base64 encoding of your string will be here"
+      placeholder="Mã hóa base64 của string của bạn sẽ ở đây"
       rows="5"
       mb-5
     />
 
     <div flex justify-center>
       <c-button @click="copyTextBase64()">
-        Copy base64
+        Sao chép base64
       </c-button>
     </div>
   </c-card>
@@ -63,18 +63,18 @@ const b64ValidationWatch = [decodeUrlSafe];
     <c-input-text
       v-model:value="base64Input"
       multiline
-      placeholder="Your base64 string..."
+      placeholder="String base64 của bạn..."
       rows="5"
       :validation-rules="b64ValidationRules"
       :validation-watch="b64ValidationWatch"
-      label="Base64 string to decode"
+      label="String Base64 để Decode"
       mb-5
     />
 
     <c-input-text
       v-model:value="textOutput"
-      label="Decoded string"
-      placeholder="The decoded string will be here"
+      label="String được Decode"
+      placeholder="String được Decode sẽ ở đây"
       multiline
       rows="5"
       readonly
@@ -83,7 +83,7 @@ const b64ValidationWatch = [decodeUrlSafe];
 
     <div flex justify-center>
       <c-button @click="copyText()">
-        Copy decoded string
+        Sao chép String đã giải mã
       </c-button>
     </div>
   </c-card>

@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'YAML to TOML',
   path: '/yaml-to-toml',
-  description: 'Parse and convert YAML to TOML.',
+  description: 'Phân tích và chuyển đổi YAML sang TOML.',
   keywords: ['yaml', 'to', 'toml', 'convert', 'transform'],
   component: () => import('./yaml-to-toml.vue'),
   icon: AlignJustified,

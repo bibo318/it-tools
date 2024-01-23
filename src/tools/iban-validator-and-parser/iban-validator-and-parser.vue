@@ -19,23 +19,23 @@ const ibanInfo = computed<CKeyValueListItems>(() => {
   return [
 
     {
-      label: 'Is IBAN valid ?',
+      label: 'IBAN có hợp lệ không ?',
       value: isIbanValid,
       showCopyButton: false,
     },
     {
-      label: 'IBAN errors',
+      label: 'Lỗi IBAN',
       value: errors.length === 0 ? undefined : errors,
       hideOnNil: true,
       showCopyButton: false,
     },
     {
-      label: 'Is IBAN a QR-IBAN ?',
+      label: 'QR-IBAN cũng là IBAN?',
       value: isQRIBAN(iban),
       showCopyButton: false,
     },
     {
-      label: 'Country code',
+      label: 'Mã quốc gia',
       value: countryCode,
     },
     {
@@ -43,7 +43,7 @@ const ibanInfo = computed<CKeyValueListItems>(() => {
       value: bban,
     },
     {
-      label: 'IBAN friendly format',
+      label: 'Định dạng thân thiện với IBAN',
       value: friendlyFormatIBAN(iban),
     },
   ];
@@ -58,7 +58,7 @@ const ibanExamples = [
 
 <template>
   <div>
-    <c-input-text v-model:value="rawIban" placeholder="Enter an IBAN to check for validity..." test-id="iban-input" />
+    <c-input-text v-model:value="rawIban" placeholder="Nhập IBAN để kiểm tra tính hợp lệ..." test-id="iban-input" />
 
     <c-card v-if="ibanInfo.length > 0" mt-5>
       <c-key-value-list :items="ibanInfo" data-test-id="iban-info" />

@@ -27,7 +27,7 @@ async function onVerifyClicked(uploadedFile: File) {
 <template>
   <div style="flex: 0 0 100%">
     <div mx-auto max-w-600px>
-      <c-file-upload title="Drag and drop a PDF file here, or click to select a file" accept=".pdf" @file-upload="onVerifyClicked" />
+      <c-file-upload title="Kéo và thả tệp PDF vào đây hoặc nhấp để chọn tệp" accept=".pdf" @file-upload="onVerifyClicked" />
 
       <c-card v-if="file" mt-4 flex gap-2>
         <div font-bold>
@@ -41,7 +41,7 @@ async function onVerifyClicked(uploadedFile: File) {
 
       <div v-if="status === 'error'">
         <c-alert mt-4>
-          No signatures found in the provided file.
+          Không tìm thấy chữ ký trong tệp được cung cấp.
         </c-alert>
       </div>
     </div>

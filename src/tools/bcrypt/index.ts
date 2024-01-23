@@ -5,7 +5,7 @@ export const tool = defineTool({
   name: 'Bcrypt',
   path: '/bcrypt',
   description:
-    'Hash and compare text string using bcrypt. Bcrypt is a password-hashing function based on the Blowfish cipher.',
+    'Hash và so sánh chuỗi văn bản bằng bcrypt. Bcrypt là chức năng password-hashing dựa trên mật mã Blowfish.',
   keywords: ['bcrypt', 'hash', 'compare', 'password', 'salt', 'round', 'storage', 'crypto'],
   component: () => import('./bcrypt.vue'),
   icon: LockSquare,

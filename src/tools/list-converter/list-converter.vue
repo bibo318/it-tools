@@ -5,12 +5,12 @@ import type { ConvertOptions } from './list-converter.types';
 
 const sortOrderOptions = [
   {
-    label: 'Sort ascending',
+    label: 'Sắp xếp tăng dần',
     value: 'asc',
     disabled: false,
   },
   {
-    label: 'Sort descending',
+    label: 'Sắp xếp giảm dần',
     value: 'desc',
     disabled: false,
   },
@@ -48,7 +48,7 @@ function transformer(value: string) {
               <n-switch v-model:value="conversionConfig.removeDuplicates" data-test-id="removeDuplicates" />
             </n-form-item>
             <n-form-item
-              label="Convert to lowercase"
+              label="Chuyển sang chữ thường"
               label-placement="left"
               label-width="150"
               :show-feedback="false"
@@ -56,14 +56,14 @@ function transformer(value: string) {
             >
               <n-switch v-model:value="conversionConfig.lowerCase" />
             </n-form-item>
-            <n-form-item label="Keep line breaks" label-placement="left" label-width="150" :show-feedback="false" mb-2>
+            <n-form-item label="Giữ ngắt dòng" label-placement="left" label-width="150" :show-feedback="false" mb-2>
               <n-switch v-model:value="conversionConfig.keepLineBreaks" />
             </n-form-item>
           </div>
           <div flex-1>
             <c-select
               v-model:value="conversionConfig.sortList"
-              label="Sort list"
+              label="Sắp xếp danh sách"
               label-position="left"
               label-width="120px"
               label-align="right"
@@ -72,12 +72,12 @@ function transformer(value: string) {
               w-full
               :disabled="conversionConfig.reverseList"
               data-test-id="sortList"
-              placeholder="Sort alphabetically"
+              placeholder="Sắp xếp theo thứ tự abc"
             />
 
             <c-input-text
               v-model:value="conversionConfig.separator"
-              label="Separator"
+              label="Dấu phân cách"
               label-position="left"
               label-width="120px"
               label-align="right"
@@ -115,9 +115,9 @@ function transformer(value: string) {
     </div>
   </div>
   <format-transformer
-    input-label="Your input data"
-    input-placeholder="Paste your input data here..."
-    output-label="Your transformed data"
+    input-label="Dữ liệu đầu vào của bạn"
+    input-placeholder="Dán dữ liệu đầu vào của bạn vào đây..."
+    output-label="Dữ liệu được chuyển đổi của bạn"
     :transformer="transformer"
   />
 </template>

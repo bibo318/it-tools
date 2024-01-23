@@ -18,32 +18,32 @@ const loremIpsumText = computed(() =>
     startWithLoremIpsum: startWithLoremIpsum.value,
   }),
 );
-const { copy } = useCopy({ source: loremIpsumText, text: 'Lorem ipsum copied to the clipboard' });
+const { copy } = useCopy({ source: loremIpsumText, text: 'Lorem ipsum đã sao chép vào bảng nhớ tạm' });
 </script>
 
 <template>
   <c-card>
-    <n-form-item label="Paragraphs" :show-feedback="false" label-width="200" label-placement="left">
+    <n-form-item label="Đoạn văn" :show-feedback="false" label-width="200" label-placement="left">
       <n-slider v-model:value="paragraphs" :step="1" :min="1" :max="20" />
     </n-form-item>
-    <n-form-item label="Sentences per paragraph" :show-feedback="false" label-width="200" label-placement="left">
+    <n-form-item label="Câu mỗi đoạn" :show-feedback="false" label-width="200" label-placement="left">
       <n-slider v-model:value="sentences" range :step="1" :min="1" :max="50" />
     </n-form-item>
-    <n-form-item label="Words per sentence" :show-feedback="false" label-width="200" label-placement="left">
+    <n-form-item label="Từ mỗi câu" :show-feedback="false" label-width="200" label-placement="left">
       <n-slider v-model:value="words" range :step="1" :min="1" :max="50" />
     </n-form-item>
-    <n-form-item label="Start with lorem ipsum ?" :show-feedback="false" label-width="200" label-placement="left">
+    <n-form-item label="Bắt đầu với lorem ipsum ?" :show-feedback="false" label-width="200" label-placement="left">
       <n-switch v-model:value="startWithLoremIpsum" />
     </n-form-item>
-    <n-form-item label="As html ?" :show-feedback="false" label-width="200" label-placement="left">
+    <n-form-item label="dưới dạng html ?" :show-feedback="false" label-width="200" label-placement="left">
       <n-switch v-model:value="asHTML" />
     </n-form-item>
 
-    <c-input-text :value="loremIpsumText" multiline placeholder="Your lorem ipsum..." readonly mt-5 rows="5" />
+    <c-input-text :value="loremIpsumText" multiline placeholder="Trang web của bạn rất tốt..." readonly mt-5 rows="5" />
 
     <div mt-5 flex justify-center>
       <c-button autofocus @click="copy()">
-        Copy
+        Sao chép
       </c-button>
     </div>
   </c-card>

@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Camera recorder',
   path: '/camera-recorder',
-  description: 'Take a picture or record a video from your webcam or camera.',
+  description: 'Chụp ảnh hoặc quay video từ webcam hoặc máy ảnh của bạn.',
   keywords: ['camera', 'recoder'],
   component: () => import('./camera-recorder.vue'),
   icon: Camera,

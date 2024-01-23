@@ -32,7 +32,7 @@ const [certs, refreshCerts] = computedRefreshableAsync(
       </n-form-item>
 
       <c-button @click="refreshCerts">
-        Refresh key-pair
+        Làm mới key-pair
       </c-button>
     </div>
   </div>

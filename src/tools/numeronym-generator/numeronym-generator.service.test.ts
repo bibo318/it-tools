@@ -3,12 +3,12 @@ import { generateNumeronym } from './numeronym-generator.service';
 
 describe('numeronym-generator service', () => {
   describe('generateNumeronym', () => {
-    it('a numeronym of a word is the first letter, the number of letters between the first and the last letter, and the last letter', () => {
+    it('chữ số của một từ là chữ cái đầu tiên, số chữ cái giữa chữ cái đầu tiên và chữ cái cuối cùng và chữ cái cuối cùng', () => {
       expect(generateNumeronym('internationalization')).toBe('i18n');
       expect(generateNumeronym('accessibility')).toBe('a11y');
       expect(generateNumeronym('localization')).toBe('l10n');
     });
-    it('a numeronym of a word with 3 letters is the word itself', () => {
+    it('chữ số của một từ có 3 chữ cái chính là từ đó', () => {
       expect(generateNumeronym('abc')).toBe('abc');
     });
   });

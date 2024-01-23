@@ -17,7 +17,7 @@ function transformer(value: string) {
 const rules: UseValidationRule<string>[] = [
   {
     validator: isValidXML,
-    message: 'Provided XML is not valid.',
+    message: 'XML được cung cấp không hợp lệ.',
   },
 ];
 </script>
@@ -25,19 +25,19 @@ const rules: UseValidationRule<string>[] = [
 <template>
   <div important:flex-full important:flex-shrink-0 important:flex-grow-0>
     <div flex justify-center>
-      <n-form-item label="Collapse content:" label-placement="left">
+      <n-form-item label="Thu gọn nội dung:" label-placement="left">
         <n-switch v-model:value="collapseContent" />
       </n-form-item>
-      <n-form-item label="Indent size:" label-placement="left" label-width="100" :show-feedback="false">
+      <n-form-item label="Kích thước lề:" label-placement="left" label-width="100" :show-feedback="false">
         <n-input-number v-model:value="indentSize" min="0" max="10" w-100px />
       </n-form-item>
     </div>
   </div>
 
   <format-transformer
-    input-label="Your XML"
-    input-placeholder="Paste your XML here..."
-    output-label="Formatted XML from your XML"
+    input-label="XML của bạn"
+    input-placeholder="Dán XML của bạn vào đây..."
+    output-label="XML được định dạng từ XML của bạn"
     output-language="xml"
     :input-validation-rules="rules"
     :transformer="transformer"

@@ -53,11 +53,11 @@ const entropyValidation = useValidation({
   rules: [
     {
       validator: value => value === '' || (value.length <= 32 && value.length >= 16 && value.length % 4 === 0),
-      message: 'Entropy length should be >= 16, <= 32 and be a multiple of 4',
+      message: 'Độ dài entropy phải >= 16, <= 32 và là bội số của 4',
     },
     {
       validator: value => /^[a-fA-F0-9]*$/.test(value),
-      message: 'Entropy should be an hexadecimal string',
+      message: 'Entropy phải là một chuỗi hexadecimal',
     },
   ],
 });
@@ -115,12 +115,12 @@ const { copy: copyPassphrase } = useCopy({ source: passphrase, text: 'Passphrase
       </n-gi>
     </n-grid>
     <n-form-item
-      label="Passphrase (mnemonic):"
+      label="Cụm mật khẩu (ghi nhớ):"
       :feedback="mnemonicValidation.message"
       :validation-status="mnemonicValidation.status"
     >
       <n-input-group>
-        <c-input-text v-model:value="passphrase" placeholder="Your mnemonic..." raw-text />
+        <c-input-text v-model:value="passphrase" placeholder="Ghi nhớ Mk của bạn..." raw-text />
 
         <c-button @click="copyPassphrase()">
           <n-icon size="22" :component="Copy" />

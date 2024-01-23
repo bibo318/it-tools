@@ -2,9 +2,9 @@ import { PasswordRound } from '@vicons/material';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Basic auth generator',
+  name: 'Trình tạo xác thực cơ bản',
   path: '/basic-auth-generator',
-  description: 'Generate a base64 basic auth header from an username and a password.',
+  description: 'Tạo tiêu đề xác thực cơ bản base64 từ tên người dùng và mật khẩu.',
   keywords: [
     'basic',
     'auth',

@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'JSON diff',
   path: '/json-diff',
-  description: 'Compare two JSON objects and get the differences between them.',
+  description: 'So sánh hai đối tượng JSON và nhận ra sự khác biệt giữa chúng.',
   keywords: ['json', 'diff', 'compare', 'difference', 'object', 'data'],
   component: () => import('./json-diff.vue'),
   icon: CompareArrowsRound,

@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Text diff',
   path: '/text-diff',
-  description: 'Compare two texts and see the differences between them.',
+  description: 'So sánh hai văn bản và thấy sự khác biệt giữa chúng.',
   keywords: ['text', 'diff', 'compare', 'string', 'text diff', 'code'],
   component: () => import('./text-diff.vue'),
   icon: FileDiff,

@@ -1,0 +1,15 @@
+tools:
+  token-generator:
+    title: Token generator
+    description: Tạo chuỗi ngẫu nhiên với các ký tự bạn muốn, chữ hoa hoặc chữ thường, số và/hoặc ký hiệu.
+
+    uppercase: Chữ hoa (ABC...)
+    lowercase: Chữ thường (abc...)
+    numbers: số (123...)
+    symbols: Biểu tượng (!-;...)
+    length: Chiều dài
+    tokenPlaceholder: 'Mã token...'
+    copied: Đã sao chép mã token vào bảng nhớ tạm
+    button:
+      copy: Sao chép
+      refresh: Refresh

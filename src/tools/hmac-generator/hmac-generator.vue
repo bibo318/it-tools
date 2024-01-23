@@ -47,20 +47,20 @@ const { copy } = useCopy({ source: hmac });
 
 <template>
   <div flex flex-col gap-4>
-    <c-input-text v-model:value="plainText" multiline raw-text placeholder="Plain text to compute the hash..." rows="3" autosize autofocus label="Plain text to compute the hash" />
-    <c-input-text v-model:value="secret" raw-text placeholder="Enter the secret key..." label="Secret key" clearable />
+    <c-input-text v-model:value="plainText" multiline raw-text placeholder="Văn bản để tính toán hàm hash..." rows="3" autosize autofocus label="Văn bản để tính toán hàm hash" />
+    <c-input-text v-model:value="secret" raw-text placeholder="Nhập secret key..." label="Secret key" clearable />
 
     <div flex gap-2>
       <c-select
-        v-model:value="hashFunction" label="Hashing function"
+        v-model:value="hashFunction" label="Hàm Hashing"
         flex-1
-        placeholder="Select an hashing function..."
+        placeholder="Chọn hàm Hashing..."
         :options="Object.keys(algos).map((label) => ({ label, value: label }))"
       />
       <c-select
-        v-model:value="encoding" label="Output encoding"
+        v-model:value="encoding" label="Mã hóa đầu ra"
         flex-1
-        placeholder="Select the result encoding..."
+        placeholder="Chọn mã hóa kết quả..."
         :options="[
           {
             label: 'Binary (base 2)',
@@ -81,10 +81,10 @@ const { copy } = useCopy({ source: hmac });
         ]"
       />
     </div>
-    <input-copyable v-model:value="hmac" type="textarea" placeholder="The result of the HMAC..." label="HMAC of your text" />
+    <input-copyable v-model:value="hmac" type="textarea" placeholder="Kết quả của HMAC..." label="HMAC của văn bản của bạn" />
     <div flex justify-center>
       <c-button @click="copy()">
-        Copy HMAC
+        Sao chép HMAC
       </c-button>
     </div>
   </div>

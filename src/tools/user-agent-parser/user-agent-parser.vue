@@ -25,12 +25,12 @@ const sections: UserAgentResultSection[] = [
       {
         label: 'Name',
         getValue: block => block?.browser.name,
-        undefinedFallback: 'No browser name available',
+        undefinedFallback: 'Không có tên trình duyệt',
       },
       {
         label: 'Version',
         getValue: block => block?.browser.version,
-        undefinedFallback: 'No browser version available',
+        undefinedFallback: 'Không có phiên bản trình duyệt nào',
       },
     ],
   },
@@ -41,12 +41,12 @@ const sections: UserAgentResultSection[] = [
       {
         label: 'Name',
         getValue: block => block?.engine.name,
-        undefinedFallback: 'No engine name available',
+        undefinedFallback: 'Không có tên engine',
       },
       {
         label: 'Version',
         getValue: block => block?.engine.version,
-        undefinedFallback: 'No engine version available',
+        undefinedFallback: 'Không có phiên bản engine',
       },
     ],
   },
@@ -57,12 +57,12 @@ const sections: UserAgentResultSection[] = [
       {
         label: 'Name',
         getValue: block => block?.os.name,
-        undefinedFallback: 'No OS name available',
+        undefinedFallback: 'Không có tên hệ điều hành',
       },
       {
         label: 'Version',
         getValue: block => block?.os.version,
-        undefinedFallback: 'No OS version available',
+        undefinedFallback: 'Không có phiên bản hệ điều hành nào',
       },
     ],
   },
@@ -73,17 +73,17 @@ const sections: UserAgentResultSection[] = [
       {
         label: 'Model',
         getValue: block => block?.device.model,
-        undefinedFallback: 'No device model available',
+        undefinedFallback: 'Không có mẫu thiết bị nào',
       },
       {
         label: 'Type',
         getValue: block => block?.device.type,
-        undefinedFallback: 'No device type available',
+        undefinedFallback: 'Không có loại thiết bị nào',
       },
       {
         label: 'Vendor',
         getValue: block => block?.device.vendor,
-        undefinedFallback: 'No device vendor available',
+        undefinedFallback: 'Không có nhà cung cấp thiết bị nào',
       },
     ],
   },
@@ -94,7 +94,7 @@ const sections: UserAgentResultSection[] = [
       {
         label: 'Architecture',
         getValue: block => block?.cpu.architecture,
-        undefinedFallback: 'No CPU architecture available',
+        undefinedFallback: 'Không có kiến ​​trúc CPU',
       },
     ],
   },
@@ -107,7 +107,7 @@ const sections: UserAgentResultSection[] = [
       v-model:value="ua"
       label="User agent string"
       multiline
-      placeholder="Put your user-agent here..."
+      placeholder="Đặt user-agent của bạn ở đây..."
       clearable
       raw-text
       rows="2"

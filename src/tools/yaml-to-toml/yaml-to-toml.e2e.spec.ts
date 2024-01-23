@@ -6,10 +6,10 @@ test.describe('Tool - YAML to TOML', () => {
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('YAML to TOML - IT Tools');
+    await expect(page).toHaveTitle('YAML to TOML - it-tools');
   });
 
-  test('JSON is parsed and outputs clean TOML', async ({ page }) => {
+  test('JSON được phân tích cú pháp và xuất ra TOML', async ({ page }) => {
     await page.getByTestId('input').fill(`
 foo: bar
 list:

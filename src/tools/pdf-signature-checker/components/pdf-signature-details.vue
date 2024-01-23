@@ -86,7 +86,7 @@ const certs = computed(() => signature.value.meta.certs.map((certificate, index)
       </template>
 
       <template #pemCertificate="{ value }">
-        <c-modal-value :value="value" label="View PEM cert">
+        <c-modal-value :value="value" label="Xem chứng chỉ PEM">
           <template #value>
             <div break-all text-xs>
               {{ value }}

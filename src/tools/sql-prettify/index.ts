@@ -2,9 +2,9 @@ import { Database } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'SQL prettify and format',
+  name: 'Làm đẹp SQL',
   path: '/sql-prettify',
-  description: 'Format and prettify your SQL queries online (it supports various SQL dialects).',
+  description: 'Định dạng và cải tiến các truy vấn SQL của bạn trực tuyến (nó hỗ trợ nhiều phương ngữ SQL khác nhau).',
   keywords: [
     'sql',
     'prettify',

@@ -34,15 +34,15 @@ const addressValidation = macAddressValidation(macAddress);
 <template>
   <div>
     <n-alert title="Info" type="info">
-      This tool uses the first method suggested by IETF using the current timestamp plus the mac address, sha1 hashed,
-      and the lower 40 bits to generate your random ULA.
+      Công cụ này sử dụng phương pháp đầu tiên được IETF đề xuất bằng cách sử dụng dấu thời gian hiện tại cộng với địa chỉ mac, băm sha1,
+      và 40 bit thấp hơn để tạo ULA ngẫu nhiên của bạn.
     </n-alert>
 
     <c-input-text
       v-model:value="macAddress"
-      placeholder="Type a MAC address"
+      placeholder="Nhập địa chỉ MAC"
       clearable
-      label="MAC address:"
+      label="Địa chỉ MAC:"
       raw-text
       my-8
       :validation="addressValidation"

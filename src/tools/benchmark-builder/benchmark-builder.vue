@@ -51,11 +51,11 @@ const results = computed(() => {
 const { copy } = useCopy({ createToast: false });
 
 const header = {
-  position: 'Position',
-  title: 'Suite',
-  size: 'Samples',
-  mean: 'Mean',
-  variance: 'Variance',
+  position: 'Chức vụ',
+  title: 'Tiêu đề',
+  size: 'Kích thước',
+  mean: 'Trung bình',
+  variance: 'Độ sai lệch',
 };
 
 function copyAsMarkdown() {
@@ -86,13 +86,13 @@ function copyAsBulletList() {
           <c-input-text
             v-model:value="suite.title"
             label-position="left"
-            label="Suite name"
-            placeholder="Suite name..."
+            label="Tên tác vụ"
+            placeholder="Tên tác vụ..."
             clearable
           />
 
           <n-divider />
-          <n-form-item label="Suite values" :show-feedback="false">
+          <n-form-item label="Giá trị tác vụ" :show-feedback="false">
             <DynamicValues v-model:values="suite.data" />
           </n-form-item>
         </c-card>
@@ -100,14 +100,14 @@ function copyAsBulletList() {
         <div flex justify-center>
           <c-button v-if="suites.length > 1" variant="text" @click="suites.splice(index, 1)">
             <n-icon :component="Trash" depth="3" mr-2 size="18" />
-            Delete suite
+            Xóa giá trị
           </c-button>
           <c-button
             variant="text"
             @click="suites.splice(index + 1, 0, { data: [0], title: `Suite ${suites.length + 1}` })"
           >
             <n-icon :component="Plus" depth="3" mr-2 size="18" />
-            Add suite
+            Thêm giá trị
           </c-button>
         </div>
       </div>
@@ -117,7 +117,7 @@ function copyAsBulletList() {
   <div style="flex: 0 0 100%">
     <div style="max-width: 600px; margin: 0 auto">
       <div mx-auto max-w-sm flex justify-center gap-3>
-        <c-input-text v-model:value="unit" placeholder="Unit (eg: ms)" label="Unit" label-position="left" mb-4 />
+        <c-input-text v-model:value="unit" placeholder="Đơn vị (eg: ms)" label="Đơn vị" label-position="left" mb-4 />
 
         <c-button
           @click="
@@ -127,7 +127,7 @@ function copyAsBulletList() {
             ]
           "
         >
-          Reset suites
+          Đặt lại giá trị
         </c-button>
       </div>
 
@@ -135,10 +135,10 @@ function copyAsBulletList() {
 
       <div mt-5 flex justify-center gap-3>
         <c-button @click="copyAsMarkdown()">
-          Copy as markdown table
+          Sao chép dưới dạng markdown
         </c-button>
         <c-button @click="copyAsBulletList()">
-          Copy as bullet list
+          Sao chép dưới dạng list
         </c-button>
       </div>
     </div>

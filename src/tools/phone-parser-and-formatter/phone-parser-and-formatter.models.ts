@@ -5,12 +5,12 @@ export { formatTypeToHumanReadable, getFullCountryName, getDefaultCountryCode };
 
 const typeToLabel: Record<NonNullable<NumberType>, string> = {
   MOBILE: 'Mobile',
-  FIXED_LINE: 'Fixed line',
-  FIXED_LINE_OR_MOBILE: 'Fixed line or mobile',
+  FIXED_LINE: 'Đường cố định',
+  FIXED_LINE_OR_MOBILE: 'Đường dây cố định hoặc di động',
   PERSONAL_NUMBER: 'Personal number',
   PREMIUM_RATE: 'Premium rate',
   SHARED_COST: 'Shared cost',
-  TOLL_FREE: 'Toll free',
+  TOLL_FREE: 'Số điện thoại miễn phí',
   UAN: 'Universal access number',
   VOICEMAIL: 'Voicemail',
   VOIP: 'VoIP',
@@ -35,7 +35,7 @@ function getFullCountryName(countryCode: string | undefined) {
 
 function getDefaultCountryCode({
   locale = window.navigator.language,
-  defaultCode = 'FR',
+  defaultCode = 'VN',
 }: { locale?: string; defaultCode?: CountryCode } = {}): CountryCode {
   const countryCode = locale.split('-')[1]?.toUpperCase();
 

@@ -36,19 +36,19 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
           multiline
           rows="1"
           autosize
-          placeholder="Your link or text..."
+          placeholder="Link hoặc văn bản của bạn..."
           mb-6
         />
         <n-form label-width="130" label-placement="left">
-          <n-form-item label="Foreground color:">
+          <n-form-item label="Màu QR:">
             <n-color-picker v-model:value="foreground" :modes="['hex']" />
           </n-form-item>
-          <n-form-item label="Background color:">
+          <n-form-item label="Màu nền:">
             <n-color-picker v-model:value="background" :modes="['hex']" />
           </n-form-item>
           <c-select
             v-model:value="errorCorrectionLevel"
-            label="Error resistance:"
+            label="Khả năng chống lỗi:"
             label-position="left"
             label-width="130px"
             label-align="right"
@@ -60,7 +60,7 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
         <div flex flex-col items-center gap-3>
           <n-image :src="qrcode" width="200" />
           <c-button @click="download">
-            Download qr-code
+            Tải xuống mã qr
           </c-button>
         </div>
       </n-gi>

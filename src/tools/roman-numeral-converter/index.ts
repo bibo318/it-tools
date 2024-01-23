@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Roman numeral converter',
   path: '/roman-numeral-converter',
-  description: 'Convert Roman numerals to numbers and convert numbers to Roman numerals.',
+  description: 'Chuyển đổi chữ số La Mã thành số và chuyển đổi số sang chữ số La Mã.',
   keywords: ['roman', 'arabic', 'converter', 'X', 'I', 'V', 'L', 'C', 'D', 'M'],
   component: () => import('./roman-numeral-converter.vue'),
   icon: LetterX,

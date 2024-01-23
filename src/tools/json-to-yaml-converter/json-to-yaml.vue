@@ -10,16 +10,16 @@ const transformer = (value: string) => withDefaultOnError(() => stringify(JSON5.
 const rules: UseValidationRule<string>[] = [
   {
     validator: (value: string) => value === '' || isNotThrowing(() => stringify(JSON5.parse(value))),
-    message: 'Provided JSON is not valid.',
+    message: 'JSON được cung cấp không hợp lệ.',
   },
 ];
 </script>
 
 <template>
   <format-transformer
-    input-label="Your JSON"
-    input-placeholder="Paste your JSON here..."
-    output-label="YAML from your JSON"
+    input-label="JSON của bạn"
+    input-placeholder="Dán JSON của bạn vào đây..."
+    output-label="YAML từ JSON của bạn"
     output-language="yaml"
     :input-validation-rules="rules"
     :transformer="transformer"

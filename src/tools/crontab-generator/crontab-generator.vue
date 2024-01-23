@@ -20,7 +20,7 @@ const cronstrueConfig = reactive({
 const helpers = [
   {
     symbol: '*',
-    meaning: 'Any value',
+    meaning: '  ',
     example: '* * * *',
     equivalent: 'Every minute',
   },

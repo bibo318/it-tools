@@ -34,15 +34,15 @@ const percentageIncreaseDecrease = computed(() => {
     <div style="margin: 0 auto; max-width: 600px">
       <c-card mb-3>
         <div mb-3 sm:hidden>
-          What is
+          Là gì
         </div>
         <div flex gap-2>
           <div hidden pt-1 sm:block style="min-width: 48px;">
-            What is
+            Là gì
           </div>
           <n-input-number v-model:value="percentageX" data-test-id="percentageX" placeholder="X" />
           <div min-w-fit pt-1>
-            % of
+            % Của
           </div>
           <n-input-number v-model:value="percentageY" data-test-id="percentageY" placeholder="Y" />
           <input-copyable v-model:value="percentageResult" data-test-id="percentageResult" readonly placeholder="Result" style="max-width: 150px;" />
@@ -51,12 +51,12 @@ const percentageIncreaseDecrease = computed(() => {
 
       <c-card mb-3>
         <div mb-3 sm:hidden>
-          X is what percent of Y
+          X là bao nhiêu phần trăm của Y
         </div>
         <div flex gap-2>
           <n-input-number v-model:value="numberX" data-test-id="numberX" placeholder="X" />
           <div hidden min-w-fit pt-1 sm:block>
-            is what percent of
+            là bao nhiêu phần trăm của
           </div>
           <n-input-number v-model:value="numberY" data-test-id="numberY" placeholder="Y" />
           <input-copyable v-model:value="numberResult" data-test-id="numberResult" readonly placeholder="Result" style="max-width: 150px;" />
@@ -65,7 +65,7 @@ const percentageIncreaseDecrease = computed(() => {
 
       <c-card mb-3>
         <div mb-3>
-          What is the percentage increase/decrease
+          Tỷ lệ tăng/giảm là bao nhiêu
         </div>
         <div flex gap-2>
           <n-input-number v-model:value="numberFrom" data-test-id="numberFrom" placeholder="From" />

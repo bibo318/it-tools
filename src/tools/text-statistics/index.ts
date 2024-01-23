@@ -2,9 +2,9 @@ import { FileText } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Text statistics',
+  name: 'Thống kê văn bản',
   path: '/text-statistics',
-  description: 'Get information about a text, the amount of characters, the amount of words, it\'s size, ...',
+  description: 'Nhận thông tin về văn bản, số lượng ký tự, số lượng từ, kích thước của nó, ...',
   keywords: ['text', 'statistics', 'length', 'characters', 'count', 'size', 'bytes'],
   component: () => import('./text-statistics.vue'),
   icon: FileText,

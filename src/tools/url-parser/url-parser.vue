@@ -9,7 +9,7 @@ const urlParsed = computed(() => withDefaultOnError(() => new URL(urlToParse.val
 const urlValidationRules = [
   {
     validator: (value: string) => isNotThrowing(() => new URL(value)),
-    message: 'Invalid url',
+    message: 'Địa chỉ url không hợp lệ',
   },
 ];
 
@@ -28,8 +28,8 @@ const properties: { title: string; key: keyof URL }[] = [
   <c-card>
     <c-input-text
       v-model:value="urlToParse"
-      label="Your url to parse:"
-      placeholder="Your url to parse..."
+      label="Url của bạn để phân tích:"
+      placeholder="Url của bạn để phân tích..."
       raw-text
       :validation-rules="urlValidationRules"
     />

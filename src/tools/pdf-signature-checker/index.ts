@@ -2,9 +2,9 @@ import { defineTool } from '../tool';
 import FileCertIcon from '~icons/mdi/file-certificate-outline';
 
 export const tool = defineTool({
-  name: 'PDF signature checker',
+  name: 'Kiểm tra chữ ký PDF',
   path: '/pdf-signature-checker',
-  description: 'Verify the signatures of a PDF file. A signed PDF file contains one or more signatures that may be used to determine whether the contents of the file have been altered since the file was signed.',
+  description: 'Xác minh chữ ký của tệp PDF. Tệp PDF đã ký chứa một hoặc nhiều chữ ký có thể được sử dụng để xác định xem nội dung của tệp có bị thay đổi kể từ khi tệp được ký hay không.',
   keywords: ['pdf', 'signature', 'checker', 'verify', 'validate', 'sign'],
   component: () => import('./pdf-signature-checker.vue'),
   icon: FileCertIcon,

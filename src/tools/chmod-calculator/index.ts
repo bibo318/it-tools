@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Chmod calculator',
   path: '/chmod-calculator',
-  description: 'Compute your chmod permissions and commands with this online chmod calculator.',
+  description: 'Tính toán các quyền và lệnh chmod của bạn bằng máy tính chmod trực tuyến này.',
   keywords: [
     'chmod',
     'calculator',

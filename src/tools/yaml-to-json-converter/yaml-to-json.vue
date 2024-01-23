@@ -21,9 +21,9 @@ const rules: UseValidationRule<string>[] = [
 
 <template>
   <format-transformer
-    input-label="Your YAML"
-    input-placeholder="Paste your yaml here..."
-    output-label="JSON from your YAML"
+    input-label="YAML của bạn"
+    input-placeholder="Dán yaml của bạn vào đây..."
+    output-label="JSON từ YAML của bạn"
     output-language="json"
     :input-validation-rules="rules"
     :transformer="transformer"

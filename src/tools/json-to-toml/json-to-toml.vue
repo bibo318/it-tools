@@ -11,16 +11,16 @@ const transformer = (value: string) => value.trim() === '' ? '' : withDefaultOnE
 const rules: UseValidationRule<string>[] = [
   {
     validator: (v: string) => v === '' || JSON5.parse(v),
-    message: 'Provided JSON is not valid.',
+    message: 'JSON được cung cấp không hợp lệ.',
   },
 ];
 </script>
 
 <template>
   <format-transformer
-    input-label="Your JSON"
-    input-placeholder="Paste your JSON here..."
-    output-label="TOML from your JSON"
+    input-label="JSON của bạn"
+    input-placeholder="Dán JSON của bạn vào đây..."
+    output-label="TOML từ JSON của bạn"
     output-language="toml"
     :input-validation-rules="rules"
     :transformer="transformer"

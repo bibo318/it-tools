@@ -86,8 +86,8 @@ function switchToBlock({ count = 1 }: { count?: number }) {
   <div>
     <c-input-text
       v-model:value="ip"
-      label="An IPv4 address with or without mask"
-      placeholder="The ipv4 address..."
+      label="Địa chỉ IPv4 có hoặc không có mask address"
+      placeholder="Địa chỉ ipv4..."
       :validation-rules="ipValidationRules"
       mb-4
     />
@@ -112,10 +112,10 @@ function switchToBlock({ count = 1 }: { count?: number }) {
       <div mt-3 flex items-center justify-between>
         <c-button @click="switchToBlock({ count: -1 })">
           <n-icon :component="ArrowLeft" />
-          Previous block
+          Trước
         </c-button>
         <c-button @click="switchToBlock({ count: 1 })">
-          Next block
+          Kế tiếp
           <n-icon :component="ArrowRight" />
         </c-button>
       </div>

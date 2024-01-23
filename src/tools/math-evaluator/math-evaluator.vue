@@ -14,7 +14,7 @@ const result = computed(() => withDefaultOnError(() => evaluate(expression.value
       v-model:value="expression"
       rows="1"
       multiline
-      placeholder="Your math expression (ex: 2*sqrt(6) )..."
+      placeholder="Biểu thức toán học của bạn (ex: 2*sqrt(6) )..."
       raw-text
       monospace
       autofocus

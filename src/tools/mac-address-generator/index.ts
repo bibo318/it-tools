@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'MAC address generator',
   path: '/mac-address-generator',
-  description: 'Enter the quantity and prefix. MAC addresses will be generated in your chosen case (uppercase or lowercase)',
+  description: 'Nhập số lượng và tiền tố. Địa chỉ MAC sẽ được tạo theo kiểu bạn đã chọn (chữ hoa hoặc chữ thường)',
   keywords: ['mac', 'address', 'generator', 'random', 'prefix'],
   component: () => import('./mac-address-generator.vue'),
   icon: Devices,

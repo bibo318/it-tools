@@ -5,7 +5,7 @@ export const tool = defineTool({
   name: 'Url parser',
   path: '/url-parser',
   description:
-    'Parse an url string to get all the different parts (protocol, origin, params, port, username-password, ...)',
+    'Phân tích chuỗi url để nhận tất cả các phần khác nhau như (protocol, origin, params, port, username-password, ...)',
   keywords: ['url', 'parser', 'protocol', 'origin', 'params', 'port', 'username', 'password', 'href'],
   component: () => import('./url-parser.vue'),
   icon: Unlink,

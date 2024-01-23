@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'IPv6 ULA generator',
   path: '/ipv6-ula-generator',
-  description: 'Generate your own local, non-routable IP addresses on your network according to RFC4193.',
+  description: 'Tạo địa chỉ IP cục bộ, không thể định tuyến trên mạng của bạn theo RFC4193.',
   keywords: ['ipv6', 'ula', 'generator', 'rfc4193', 'network', 'private'],
   component: () => import('./ipv6-ula-generator.vue'),
   icon: BuildingFactory,

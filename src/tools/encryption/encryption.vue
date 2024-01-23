@@ -4,7 +4,7 @@ import { computedCatch } from '@/composable/computed/catchedComputed';
 
 const algos = { AES, TripleDES, Rabbit, RC4 };
 
-const cypherInput = ref('Lorem ipsum dolor sit amet');
+const cypherInput = ref('hello');
 const cypherAlgo = ref<keyof typeof algos>('AES');
 const cypherSecret = ref('my secret key');
 const cypherOutput = computed(() => algos[cypherAlgo.value].encrypt(cypherInput.value, cypherSecret.value).toString());
@@ -14,7 +14,7 @@ const decryptAlgo = ref<keyof typeof algos>('AES');
 const decryptSecret = ref('my secret key');
 const [decryptOutput, decryptError] = computedCatch(() => algos[decryptAlgo.value].decrypt(decryptInput.value, decryptSecret.value).toString(enc.Utf8), {
   defaultValue: '',
-  defaultErrorMessage: 'Unable to decrypt your text',
+  defaultErrorMessage: 'Không thể giải mã văn bản của bạn',
 });
 </script>
 
@@ -23,23 +23,23 @@ const [decryptOutput, decryptError] = computedCatch(() => algos[decryptAlgo.valu
     <div flex gap-3>
       <c-input-text
         v-model:value="cypherInput"
-        label="Your text:"
+        label="Văn bản của bạn:"
         placeholder="The string to cypher"
         rows="4"
         multiline raw-text monospace autosize flex-1
       />
       <div flex flex-1 flex-col gap-2>
-        <c-input-text v-model:value="cypherSecret" label="Your secret key:" clearable raw-text />
+        <c-input-text v-model:value="cypherSecret" label="Khóa bí mật của bạn:" clearable raw-text />
 
         <c-select
           v-model:value="cypherAlgo"
-          label="Encryption algorithm:"
+          label="Thuật toán mã hóa:"
           :options="Object.keys(algos).map((label) => ({ label, value: label }))"
         />
       </div>
     </div>
     <c-input-text
-      label="Your text encrypted:"
+      label="Văn bản của bạn được mã hóa:"
       :value="cypherOutput"
       rows="3"
       placeholder="Your string hash"
@@ -50,27 +50,27 @@ const [decryptOutput, decryptError] = computedCatch(() => algos[decryptAlgo.valu
     <div flex gap-3>
       <c-input-text
         v-model:value="decryptInput"
-        label="Your encrypted text:"
+        label="Văn bản được mã hóa của bạn:"
         placeholder="The string to cypher"
         rows="4"
         multiline raw-text monospace autosize flex-1
       />
       <div flex flex-1 flex-col gap-2>
-        <c-input-text v-model:value="decryptSecret" label="Your secret key:" clearable raw-text />
+        <c-input-text v-model:value="decryptSecret" label="Chìa khóa bí mật của bạn:" clearable raw-text />
 
         <c-select
           v-model:value="decryptAlgo"
-          label="Encryption algorithm:"
+          label="Thuật toán mã hóa:"
           :options="Object.keys(algos).map((label) => ({ label, value: label }))"
         />
       </div>
     </div>
-    <c-alert v-if="decryptError" type="error" mt-12 title="Error while decrypting">
+    <c-alert v-if="decryptError" type="error" mt-12 title="Lỗi khi giải mã">
       {{ decryptError }}
     </c-alert>
     <c-input-text
       v-else
-      label="Your decrypted text:"
+      label="Văn bản được giải mã của bạn:"
       :value="decryptOutput"
       placeholder="Your string hash"
       rows="3"

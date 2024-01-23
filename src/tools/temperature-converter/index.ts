@@ -2,10 +2,10 @@ import { Temperature } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Temperature converter',
+  name: 'Bộ chuyển đổi nhiệt độ',
   path: '/temperature-converter',
   description:
-    'Temperature degrees conversions for Kelvin, Celsius, Fahrenheit, Rankine, Delisle, Newton, Réaumur and Rømer.',
+    'Chuyển đổi độ nhiệt độ cho Kelvin, C, F, Rankine, Delisle, Newton, Réaumur và Rømer.',
   keywords: [
     'temperature',
     'converter',

@@ -1,15 +1,15 @@
 import { expect, test } from '@playwright/test';
 
-test.describe('Tool - Password strength analyser', () => {
+test.describe('Tool - Phân tích độ mạnh mật khẩu', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/password-strength-analyser');
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Password strength analyser - IT Tools');
+    await expect(page).toHaveTitle('Phân tích độ mạnh mật khẩu - it-tools');
   });
 
-  test('Computes the brute force attack time of a password', async ({ page }) => {
+  test('Tính toán thời gian tấn công bạo lực của mật khẩu', async ({ page }) => {
     await page.getByTestId('password-input').fill('ABCabc123!@#');
 
     const crackDuration = await page.getByTestId('crack-duration').textContent();

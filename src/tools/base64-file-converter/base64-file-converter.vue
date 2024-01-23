@@ -33,7 +33,7 @@ function downloadFile() {
 
 const fileInput = ref() as Ref<File>;
 const { base64: fileBase64 } = useBase64(fileInput);
-const { copy: copyFileBase64 } = useCopy({ source: fileBase64, text: 'Base64 string copied to the clipboard' });
+const { copy: copyFileBase64 } = useCopy({ source: fileBase64, text: 'Đã sao chép chuỗi Base64 vào bảng nhớ tạm' });
 
 async function onUpload(file: File) {
   if (file) {
@@ -47,7 +47,7 @@ async function onUpload(file: File) {
     <c-input-text
       v-model:value="base64Input"
       multiline
-      placeholder="Put your base64 file string here..."
+      placeholder="Đặt chuỗi tệp base64 của bạn vào đây..."
       rows="5"
       :validation="base64InputValidation"
       mb-2
@@ -55,18 +55,18 @@ async function onUpload(file: File) {
 
     <div flex justify-center>
       <c-button :disabled="base64Input === '' || !base64InputValidation.isValid" @click="downloadFile()">
-        Download file
+        Tải tập tin
       </c-button>
     </div>
   </c-card>
 
   <c-card title="File to base64">
-    <c-file-upload title="Drag and drop a file here, or click to select a file" @file-upload="onUpload" />
-    <c-input-text :value="fileBase64" multiline readonly placeholder="File in base64 will be here" rows="5" my-2 />
+    <c-file-upload title="Kéo và thả tệp vào đây hoặc nhấp để chọn tệp" @file-upload="onUpload" />
+    <c-input-text :value="fileBase64" multiline readonly placeholder="Tệp trong base64 sẽ ở đây" rows="5" my-2 />
 
     <div flex justify-center>
       <c-button @click="copyFileBase64()">
-        Copy
+        Sao chép
       </c-button>
     </div>
   </c-card>

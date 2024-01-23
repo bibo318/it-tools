@@ -42,7 +42,7 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
         <c-select
           v-model:value="encryption"
           mb-4
-          label="Encryption method"
+          label="Phương pháp mã hóa"
           default-value="WPA"
           label-position="left"
           label-width="130px"
@@ -75,7 +75,7 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
             label="SSID:"
             rows="1"
             autosize
-            placeholder="Your WiFi SSID..."
+            placeholder="SSID Wi-Fi của bạn..."
             mb-6
           />
           <n-checkbox v-model:checked="isHiddenSSID">
@@ -92,7 +92,7 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
           rows="1"
           autosize
           type="password"
-          placeholder="Your WiFi Password..."
+          placeholder="Mật khẩu WiFi của bạn..."
           mb-6
         />
         <c-select
@@ -114,7 +114,7 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
             label="Identity:"
             rows="1"
             autosize
-            placeholder="Your EAP Identity..."
+            placeholder="Nhận dạng EAP của bạn..."
             mb-6
           />
           <n-checkbox v-model:checked="eapAnonymous">
@@ -132,10 +132,10 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
           searchable mb-4
         />
         <n-form label-width="130" label-placement="left">
-          <n-form-item label="Foreground color:">
+          <n-form-item label="Màu QR:">
             <n-color-picker v-model:value="foreground" :modes="['hex']" />
           </n-form-item>
-          <n-form-item label="Background color:">
+          <n-form-item label="Màu nền:">
             <n-color-picker v-model:value="background" :modes="['hex']" />
           </n-form-item>
         </n-form>
@@ -144,7 +144,7 @@ const { download } = useDownloadFileFromBase64({ source: qrcode, filename: 'qr-c
         <div flex flex-col items-center gap-3>
           <img alt="wifi-qrcode" :src="qrcode" width="200">
           <c-button @click="download">
-            Download qr-code
+            Tải xuống mã qr
           </c-button>
         </div>
       </div>

@@ -18,17 +18,17 @@ const [ulids, refreshUlids] = computedRefreshable(() => {
   return ids.join('\n');
 });
 
-const { copy } = useCopy({ source: ulids, text: 'ULIDs copied to the clipboard' });
+const { copy } = useCopy({ source: ulids, text: 'ULID được sao chép vào bảng nhớ tạm' });
 </script>
 
 <template>
   <div flex flex-col justify-center gap-2>
     <div flex items-center>
-      <label w-75px> Quantity:</label>
+      <label w-75px> Số lượng:</label>
       <n-input-number v-model:value="amount" min="1" max="100" flex-1 />
     </div>
 
-    <c-buttons-select v-model:value="format" :options="formats" label="Format: " label-width="75px" />
+    <c-buttons-select v-model:value="format" :options="formats" label="Định dạng: " label-width="75px" />
 
     <c-card mt-5 flex data-test-id="ulids">
       <pre m-0 m-x-auto>{{ ulids }}</pre>
@@ -39,7 +39,7 @@ const { copy } = useCopy({ source: ulids, text: 'ULIDs copied to the clipboard' 
         Refresh
       </c-button>
       <c-button @click="copy()">
-        Copy
+        Sao chép
       </c-button>
     </div>
   </div>

@@ -8,10 +8,10 @@ const numeronym = computed(() => generateNumeronym(word.value));
 
 <template>
   <div flex flex-col items-center gap-4>
-    <c-input-text v-model:value="word" placeholder="Enter a word, e.g. 'internationalization'" size="large" clearable test-id="word-input" />
+    <c-input-text v-model:value="word" placeholder="Nhập một từ, Ví dụ. 'internationalization'" size="large" clearable test-id="word-input" />
 
     <icon-mdi-arrow-down text-30px />
 
-    <input-copyable :value="numeronym" size="large" readonly placeholder="Your numeronym will be here, e.g. 'i18n'" test-id="numeronym" />
+    <input-copyable :value="numeronym" size="large" readonly placeholder="Chữ số của bạn sẽ ở đây, ví dụ. 'i18n'" test-id="numeronym" />
   </div>
 </template>

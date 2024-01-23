@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'Text to ASCII binary',
   path: '/text-to-binary',
-  description: 'Convert text to its ASCII binary representation and vice versa.',
+  description: 'Chuyển đổi văn bản sang biểu diễn nhị phân ASCII và ngược lại.',
   keywords: ['text', 'to', 'binary', 'converter', 'encode', 'decode', 'ascii'],
   component: () => import('./text-to-binary.vue'),
   icon: Binary,

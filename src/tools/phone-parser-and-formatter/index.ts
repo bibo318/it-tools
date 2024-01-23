@@ -2,10 +2,10 @@ import { Phone } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
 export const tool = defineTool({
-  name: 'Phone parser and formatter',
+  name: 'Phân tích SĐT',
   path: '/phone-parser-and-formatter',
   description:
-    'Parse, validate and format phone numbers. Get information about the phone number, like the country code, type, etc.',
+    'Phân tích, xác thực và định dạng số điện thoại. Nhận thông tin về số điện thoại, như mã quốc gia, loại, v.v..',
   keywords: [
     'phone',
     'parser',

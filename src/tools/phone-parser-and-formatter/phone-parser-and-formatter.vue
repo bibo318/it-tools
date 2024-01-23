@@ -17,7 +17,7 @@ const validation = useValidation({
   rules: [
     {
       validator: value => value === '' || /^[0-9 +\-()]+$/.test(value),
-      message: 'Invalid phone number',
+      message: 'Số điện thoại không hợp lệ',
     },
   ],
 });
@@ -35,43 +35,43 @@ const parsedDetails = computed(() => {
 
   return [
     {
-      label: 'Country',
+      label: 'Quốc gia',
       value: parsed.country,
     },
     {
-      label: 'Country',
+      label: 'Quốc gia',
       value: getFullCountryName(parsed.country),
     },
     {
-      label: 'Country calling code',
+      label: 'Mã gọi quốc gia',
       value: parsed.countryCallingCode,
     },
     {
-      label: 'Is valid?',
+      label: 'Hợp lệ?',
       value: booleanToHumanReadable(parsed.isValid()),
     },
     {
-      label: 'Is possible?',
+      label: 'Có khả năng?',
       value: booleanToHumanReadable(parsed.isPossible()),
     },
     {
-      label: 'Type',
+      label: 'Kiểu',
       value: formatTypeToHumanReadable(parsed.getType()),
     },
     {
-      label: 'International format',
+      label: 'Khuôn mẫu quốc tế',
       value: parsed.formatInternational(),
     },
     {
-      label: 'National format',
+      label: 'Định dạng quốc gia',
       value: parsed.formatNational(),
     },
     {
-      label: 'E.164 format',
+      label: 'Định dạng E.164',
       value: parsed.format('E.164'),
     },
     {
-      label: 'RFC3966 format',
+      label: 'Định dạng RFC3966',
       value: parsed.format('RFC3966'),
     },
   ];
@@ -85,12 +85,12 @@ const countriesOptions = getCountries().map(code => ({
 
 <template>
   <div>
-    <c-select v-model:value="defaultCountryCode" label="Default country code:" :options="countriesOptions" searchable mb-5 />
+    <c-select v-model:value="defaultCountryCode" label="Mã quốc gia mặc định:" :options="countriesOptions" searchable mb-5 />
 
     <c-input-text
       v-model:value="rawPhone"
-      placeholder="Enter a phone number"
-      label="Phone number:"
+      placeholder="Nhập số điện thoại"
+      label="Số điện thoại:"
       :validation="validation"
       mb-5
     />
@@ -104,7 +104,7 @@ const countriesOptions = getCountries().map(code => ({
           <td>
             <span-copyable v-if="value" :value="value" />
             <span v-else op-70>
-              Unknown
+              không xác định
             </span>
           </td>
         </tr>

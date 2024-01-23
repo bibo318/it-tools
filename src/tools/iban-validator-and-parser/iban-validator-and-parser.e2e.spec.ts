@@ -17,11 +17,11 @@ test.describe('Tool - Iban validator and parser', () => {
     await page.goto('/iban-validator-and-parser');
   });
 
-  test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('IBAN validator and parser - IT Tools');
+  test('Có đúng tiêu đề', async ({ page }) => {
+    await expect(page).toHaveTitle('IBAN validator and parser - it-tools');
   });
 
-  test('iban info are extracted from a valid iban', async ({ page }) => {
+  test('thông tin iban được trích xuất từ ​​một iban hợp lệ', async ({ page }) => {
     await page.getByTestId('iban-input').fill('DE89370400440532013000');
 
     const ibanInfo = await extractIbanInfo({ page });
@@ -35,7 +35,7 @@ test.describe('Tool - Iban validator and parser', () => {
     ]);
   });
 
-  test('invalid iban errors are displayed', async ({ page }) => {
+  test('lỗi iban không hợp lệ được hiển thị', async ({ page }) => {
     await page.getByTestId('iban-input').fill('FR7630006060011234567890189');
 
     const ibanInfo = await extractIbanInfo({ page });

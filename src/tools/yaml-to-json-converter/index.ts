@@ -4,7 +4,7 @@ import { defineTool } from '../tool';
 export const tool = defineTool({
   name: 'YAML to JSON converter',
   path: '/yaml-to-json-converter',
-  description: 'Simply convert YAML to JSON with this live online converter.',
+  description: 'Chỉ cần chuyển đổi YAML sang JSON bằng trình chuyển đổi trực tuyến trực tiếp này.',
   keywords: ['yaml', 'to', 'json'],
   component: () => import('./yaml-to-json.vue'),
   icon: AlignJustified,

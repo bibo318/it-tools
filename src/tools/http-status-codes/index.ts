@@ -6,7 +6,7 @@ import { codesByCategories } from './http-status-codes.constants';
 export const tool = defineTool({
   name: 'HTTP status codes',
   path: '/http-status-codes',
-  description: 'The list of all HTTP status codes their name and their meaning.',
+  description: 'Danh sách tất cả các mã trạng thái HTTP tên và ý nghĩa của chúng.',
   keywords: [
     'http',
     'status',

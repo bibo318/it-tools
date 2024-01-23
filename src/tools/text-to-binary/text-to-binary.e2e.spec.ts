@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
 
-test.describe('Tool - Text to ASCII binary', () => {
+test.describe('Tool - Văn bản sang dạng nhị phân ASCII', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/text-to-binary');
   });
 
   test('Has correct title', async ({ page }) => {
-    await expect(page).toHaveTitle('Text to ASCII binary - IT Tools');
+    await expect(page).toHaveTitle('Văn bản sang dạng nhị phân ASCII - it-tools');
   });
 
   test('Text to binary conversion', async ({ page }) => {

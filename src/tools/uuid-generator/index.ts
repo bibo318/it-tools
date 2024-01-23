@@ -1,11 +1,12 @@
 import { Fingerprint } from '@vicons/tabler';
 import { defineTool } from '../tool';
 
+import { translate } from '@/plugins/i18n.plugin'; // Giả sử rằng bạn có plugin i18n
+
 export const tool = defineTool({
-  name: 'Trình tạo UUID',
+  name: translate('uuid.title'),
   path: '/uuid-generator',
-  description:
-    'Mã định danh duy nhất toàn cầu (UUID) là số 128 bit được sử dụng để nhận dạng thông tin trong hệ thống máy tính. Số lượng UUID có thể có là 16^32, tức là 2^128 hoặc khoảng 3,4x10^38 (rất nhiều!).',
+  description: translate('uuid.description'),
   keywords: ['uuid', 'v4', 'random', 'id', 'alphanumeric', 'identity', 'token', 'string', 'identifier', 'unique', 'v1', 'v3', 'v5', 'nil'],
   component: () => import('./uuid-generator.vue'),
   icon: Fingerprint,

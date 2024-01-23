@@ -1,0 +1,20 @@
+hash:
+  title: "Hash"
+  name: "Bcrypt"
+  path: "/bcrypt" # Thêm dòng này
+  your_string: "String của bạn: "
+  your_string_placeholder: "String của bạn tới bcrypt..."
+  salt_count: "Đếm Salt : "
+  salt_placeholder: "Salt rounds..."
+  copy_hash: "Copy hash"
+  description: "Hash và so sánh chuỗi văn bản bằng bcrypt. Bcrypt là chức năng băm mật khẩu dựa trên mật mã Blowfish."
+
+compare:
+  title: "So sánh String với hàm băm"
+  your_string: "String của bạn: "
+  your_string_placeholder: "String của bạn để so sánh..."
+  your_hash: "Hash của bạn: "
+  your_hash_placeholder: "Hash của bạn để so sánh..."
+  match_result: "Chúng có khớp không ? "
+  yes: "Đúng"
+  no: "KHÔNG"

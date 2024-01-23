@@ -1,0 +1,11 @@
+uuid: 
+   title: "Trình tạo UUID"
+   description: "Mã định danh duy nhất toàn cầu (UUID) là số 128 bit..."
+   version_label: "Phiên bản UUID"
+   quantity_label: "Số lượng"
+   namespace_label: "Không gian tên"
+   name_label: "Tên"
+   copy_button: "Sao chép"
+   refresh_button: "Làm mới"
+   copied_notification: "UUID đã được sao chép vào bảng nhớ tạm"
+   invalid_uuid_message: "UUID không hợp lệ"

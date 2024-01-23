@@ -1,0 +1,12 @@
+tools:
+  hash-text:
+    title: 'Mã hóa văn bản Hash'
+    description: 'Mã hóa chuỗi văn bản bằng các thuật toán MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3, hoặc RIPEMD160.'
+    placeholder: 'Nhập chuỗi cần mã hóa hash...'
+    label: 'Văn bản cần mã hóa hash:'
+    encodingLabel: 'Mã hóa thông báo'
+    encodingOptions:
+      bin: 'Nhị phân(Bin) (base 2)'
+      hex: 'Thập lục phân(hex) (base 16)'
+      base64: 'Base64 (base 64)'
+      base64url: 'Base64url (base 64 với ký tự an toàn cho URL)'

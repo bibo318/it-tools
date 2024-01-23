@@ -1,0 +1,12 @@
+tools:
+  hash-text:
+    title: '文本哈希'
+    description: '使用您需要的算法对文本字符串进行哈希：MD5、SHA1、SHA256、SHA224、SHA512、SHA384、SHA3或RIPEMD160。'
+    placeholder: '输入要哈希的文本...'
+    label: '要哈希的文本：'
+    encodingLabel: '编码方式'
+    encodingOptions:
+      bin: '二进制（基数2）'
+      hex: '十六进制（基数16）'
+      base64: 'Base64（基数64）'
+      base64url: 'Base64 URL安全字符（带有URL安全字符的基数64）'

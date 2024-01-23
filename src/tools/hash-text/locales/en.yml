@@ -1,0 +1,12 @@
+tools:
+  hash-text:
+    title: 'Hash Text'
+    description: 'Hash text string using the algorithm you need: MD5, SHA1, SHA256, SHA224, SHA512, SHA384, SHA3, or RIPEMD160.'
+    placeholder: 'Enter the text you want to hash...'
+    label: 'Text to hash:'
+    encodingLabel: 'Encoding Method'
+    encodingOptions:
+      bin: 'Binary (base 2)'
+      hex: 'Hexadecimal (base 16)'
+      base64: 'Base64 (base 64)'
+      base64url: 'Base64url (base 64 with URL-safe characters)'

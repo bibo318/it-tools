@@ -7,6 +7,7 @@ const localesLong: Record<string, string> = {
   fr: 'Français',
   pt: 'Português',
   ru: 'Русский',
+  vn: 'VietNam',
   zh: '中文',
 };
 

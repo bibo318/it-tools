@@ -1,0 +1,18 @@
+hash:
+  title: "哈希"
+  name: "Bcrypt"
+  your_string: "您的字符串："
+  your_string_placeholder: "要bcrypt的字符串..."
+  salt_count: "盐数："
+  salt_placeholder: "盐轮数..."
+  copy_hash: "复制哈希"
+
+compare:
+  title: "比较字符串与哈希"
+  your_string: "您的字符串："
+  your_string_placeholder: "要比较的字符串..."
+  your_hash: "您的哈希："
+  your_hash_placeholder: "要比较的哈希..."
+  match_result: "匹配结果？"
+  yes: "是"
+  no: "否"

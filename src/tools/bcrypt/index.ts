@@ -1,11 +1,11 @@
 import { LockSquare } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Bcrypt',
+  name: translate('hash.name'),
   path: '/bcrypt',
-  description:
-    'Hash và so sánh chuỗi văn bản bằng bcrypt. Bcrypt là chức năng password-hashing dựa trên mật mã Blowfish.',
+  description: translate('hash.description'),
   keywords: ['bcrypt', 'hash', 'compare', 'password', 'salt', 'round', 'storage', 'crypto'],
   component: () => import('./bcrypt.vue'),
   icon: LockSquare,

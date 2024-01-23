@@ -47,10 +47,10 @@ const { copy } = useCopy({ source: uuids, text: 'UUID được sao chép vào b�
 
 <template>
   <div>
-    <c-buttons-select v-model:value="version" :options="versions" label="Phiên bản UUID" label-width="100px" mb-2 />
+    <c-buttons-select v-model:value="version" :options="versions" :label="$t('uuid.version_label')" label-width="100px" mb-2 />
 
     <div mb-2 flex items-center>
-      <span w-100px>Số lượng </span>
+      <span w-100px>{{ $t('uuid.quantity_label') }} </span>
       <n-input-number v-model:value="count" flex-1 :min="1" :max="50" placeholder="Số lượng UUID" />
     </div>
 
@@ -95,7 +95,7 @@ const { copy } = useCopy({ source: uuids, text: 'UUID được sao chép vào b�
       style="text-align: center; font-family: monospace"
       :value="uuids"
       multiline
-      placeholder="Your uuids"
+      :placeholder="$t('uuid.placeholder')"
       autosize
       rows="1"
       readonly
@@ -107,10 +107,10 @@ const { copy } = useCopy({ source: uuids, text: 'UUID được sao chép vào b�
 
     <div flex justify-center gap-3>
       <c-button autofocus @click="copy()">
-        Sao chép
+        {{ $t('uuid.version_label') }}
       </c-button>
       <c-button @click="refreshUUIDs">
-        Refresh
+        {{ $t('uuid.refresh_button') }}
       </c-button>
     </div>
   </div>

@@ -1,0 +1,13 @@
+tools:
+   ulid:
+       title: "ULID generator"
+       descriptions: "Tạo Mã định danh có thể sắp xếp theo từ điển duy nhất toàn cầu ngẫu nhiên (ULID)"
+       version_label: "Phiên bản UUID"
+       quantity_label: "Số lượng"
+       placeholder: uuid của bạn
+       namespace_label: "Namespace"
+       name_label: "Tên"
+       copy_button: "Sao chép"
+       refresh_button: "Làm mới"
+       copied_notification: "UUID đã được sao chép vào bảng nhớ tạm"
+       invalid_uuid_message: "UUID không hợp lệ"

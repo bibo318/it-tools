@@ -1,9 +1,10 @@
 uuid: 
    title: "Trình tạo UUID"
-   description: "Mã định danh duy nhất toàn cầu (UUID) là số 128 bit..."
+   descriptions: "Mã định danh duy nhất toàn cầu (UUID) là số 128 bit được sử dụng để nhận dạng thông tin trong hệ thống máy tính. Số lượng UUID có thể có là 16^32 hoặc 2^128 hoặc khoảng 3,4x10^38 (khá nhiều!)"
    version_label: "Phiên bản UUID"
    quantity_label: "Số lượng"
-   namespace_label: "Không gian tên"
+   placeholder: uuid của bạn
+   namespace_label: "Namespace"
    name_label: "Tên"
    copy_button: "Sao chép"
    refresh_button: "Làm mới"

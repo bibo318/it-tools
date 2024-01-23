@@ -36,61 +36,61 @@ const { copy: copyDecoded } = useCopy({ source: decodeOutput, text: 'Decoded str
 </script>
 
 <template>
-  <c-card title="Encode">
+  <c-card :title="$t('encodeTitle')">
     <c-input-text
       v-model:value="encodeInput"
-      label="Your string :"
+      :label="$t('yourStringLabel')"
       :validation="encodedValidation"
       multiline
       autosize
-      placeholder="The string to encode"
+      :placeholder="$t('stringToEncodePlaceholder')"
       rows="2"
       mb-3
     />
 
     <c-input-text
-      label="Your string encoded :"
+      :label="$t('yourStringEncodedLabel')"
       :value="encodeOutput"
       multiline
       autosize
       readonly
-      placeholder="Your string encoded"
+      :placeholder="$t('yourStringEncodedPlaceholder')"
       rows="2"
       mb-3
     />
 
     <div flex justify-center>
       <c-button @click="copyEncoded()">
-        Copy
+        {{ $t('copyButton') }}
       </c-button>
     </div>
   </c-card>
-  <c-card title="Decode">
+  <c-card :title="$t('decodeTitle')">
     <c-input-text
       v-model:value="decodeInput"
-      label="Your encoded string :"
+      :label="$t('yourEncodedStringLabel')"
       :validation="decodeValidation"
       multiline
       autosize
-      placeholder="The string to decode"
+      :placeholder="$t('stringToDecodePlaceholder')"
       rows="2"
       mb-3
     />
 
     <c-input-text
-      label="Your string decoded :"
+      :label="$t('yourStringDecodedPlaceholder')"
       :value="decodeOutput"
       multiline
       autosize
       readonly
-      placeholder="Your string decoded"
+      :placeholder="$t('yourStringDecodedPlaceholder')"
       rows="2"
       mb-3
     />
 
     <div flex justify-center>
       <c-button @click="copyDecoded()">
-        Copy
+        {{ $t('copyButton') }}
       </c-button>
     </div>
   </c-card>

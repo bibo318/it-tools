@@ -1,10 +1,11 @@
 import { Link } from '@vicons/tabler';
 import { defineTool } from '../tool';
+import { translate } from '@/plugins/i18n.plugin';
 
 export const tool = defineTool({
-  name: 'Encode/decode chuỗi url',
+  name: translate('toolName'),
   path: '/url-encoder',
-  description: 'Mã hóa sang định dạng được mã hóa url (còn được gọi là "mã hóa phần trăm") hoặc giải mã từ định dạng đó.',
+  description: translate('toolDescription'),
   keywords: ['url', 'encode', 'decode', 'percent', '%20', 'format'],
   component: () => import('./url-encoder.vue'),
   icon: Link,
